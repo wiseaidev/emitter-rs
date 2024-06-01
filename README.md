@@ -11,7 +11,7 @@ To start using `emitter-rs`, add it to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-emitter-rs = "0.0.3"
+emitter-rs = "0.0.4"
 ```
 
 Then, you can use it in your code:

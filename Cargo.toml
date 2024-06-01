@@ -1,7 +1,7 @@
 [package]
 edition = "2021"
 name = "emitter-rs"
-version = "0.0.3"
+version = "0.0.4"
 authors = ["Mahmoud Harmouch <oss@wiseai.dev>"]
 description = "📢 Emitter RS is a lightweight EventEmitter implementation for Rust and Wasm."
 documentation = "https://docs.rs/emitter-rs"
