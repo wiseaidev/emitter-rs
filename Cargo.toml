@@ -1,0 +1,42 @@
+[package]
+edition = "2021"
+name = "emitter-rs"
+version = "0.0.3"
+authors = ["Mahmoud Harmouch <oss@wiseai.dev>"]
+description = "📢 Emitter RS is a lightweight EventEmitter implementation for Rust and Wasm."
+documentation = "https://docs.rs/emitter-rs"
+repository = "https://github.com/wiseaidev/emitter-rs"
+homepage = "https://github.com/wiseaidev/emitter-rs"
+keywords = ["event-emitter", "emitter", "EventEmitter", "event"]
+categories = ["asynchronous", "wasm"]
+license = "MIT"
+
+[dependencies]
+getrandom = { version = "0.2.15", features = ["js"] }
+lazy_static = "1.4.0"
+serde = { version = "1.0.203", features = ["derive"] }
+serde_json = "1.0.117"
+uuid = { version = "1.8.0", features = ["v4"] }
+
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+wasm-bindgen-futures = "0.4.42"
+futures = "0.3.30"
+
+[target.'cfg(target_arch = "wasm32")'.dev-dependencies]
+wasm-bindgen-test = "0.3.42"
+
+[badges]
+maintenance = { status = "passively-maintained" }
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]
+
+[profile.release]
+codegen-units = 1
+opt-level = "z"
+lto = "thin"
+strip = "symbols"
+
+[dev-dependencies]
+bump2version = "0.1.3"

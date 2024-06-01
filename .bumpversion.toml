@@ -1,0 +1,10 @@
+[bumpversion]
+current_version = 0.0.3
+
+[bumpversion:file:Cargo.toml]
+search = version = "{current_version}"
+replace = version = "{new_version}"
+
+[bumpversion:file:README.md]
+search = emitter-rs = "{current_version}"
+replace = emitter-rs = "{new_version}"
