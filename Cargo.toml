@@ -12,7 +12,7 @@ categories = ["asynchronous", "wasm"]
 license = "MIT"
 
 [dependencies]
-getrandom = { version = "0.2.15", features = ["js"] }
+getrandom = { version = "0.3.2", features = ["js"] }
 lazy_static = "1.4.0"
 serde = { version = "1.0.203", features = ["derive"] }
 serde_json = "1.0.117"
